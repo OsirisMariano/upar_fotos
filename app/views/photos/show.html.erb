@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @photo.name %>
+</p>
+
+<div class="field">
+  <% @photo.images.each do |image| %>
+    <%= image_tag image %>
+  <% end %>
+</div>
+
+<%= link_to 'Editar', edit_photo_path(@photo) %> |
+<%= link_to 'Voltar', photos_path %>
